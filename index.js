@@ -40,10 +40,8 @@ async function startServerAfterConnection() {
                 }
             });
 
-            const PORT = process.env.PORT || 3000;
-
-            app.listen(PORT, () => {
-                console.log(`Servidor escuchando en el puerto ${PORT}`);
+            app.listen(80, () => {
+                console.log(`Servidor escuchando en el puerto ${80}`);
             });
         } else if (connection === "close") {
             const shouldReconnect =
